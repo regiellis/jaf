@@ -1,0 +1,71 @@
+{
+  "name": "jaf",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "bower_components",
+    "bower_modules",
+    "test",
+    "tests"
+  ],
+  "exportsOverride": {
+    "angularjs": {
+      "scripts/libs": "angular.js"
+    },
+    "angular-ui-router": {
+      "scripts/libs": "release/angular-ui-router.js"
+    },
+    "angular-ui-select": {
+      "scripts/libs": "dist/select.js",
+      "styles/libs": "dist/select.css"
+    },
+    "angular-ui-utils": {
+      "scripts/libs": "ui-utils.js"
+    },
+    "jquery": {
+      "scripts/libs": "dist/jquery.js"
+    },
+    "modernizr": {
+      "scripts/libs": "modernizr.js"
+    },
+    "pubsub-js": {
+      "scripts/libs": "src/pubsub.js"
+    },
+    "normalize-less": {
+      "styles/libs": "normalize.less"
+    },
+    "lesshat": {
+      "styles/libs": "build/lesshat.less"
+    },
+    "animate-less": {
+      "styles/libs": "less/*.less"
+    },
+    "font-awesome": {
+      "scripts/libs": "**/*",
+      "styles/libs": "**/*.less",
+      "fonts/": "fonts/**/*"
+    },
+    "*": {
+      "scripts/libs": "**/*",
+      "styles/libs": "**/*",
+      "images/gui/": "**/*",
+      "fonts/": "**/*"
+    }
+  },
+  "dependencies": {
+    "normalize-less": "*",
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.3",
+    "pubsub-js": "~1.5.0",
+    "font-awesome": "~4.2.0",
+    "lesshat": "~3.0.2",
+    "angular-ui-select": "~0.7.0",
+    "angular-ui-utils": "~0.1.1",
+    "angular-ui-router": "~0.2.11",
+    "angularjs": "~1.2.26",
+    "animate-less": "~2.0.1"
+  },
+  "devDependencies": {}
+}

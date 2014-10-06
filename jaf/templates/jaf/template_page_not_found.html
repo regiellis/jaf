@@ -1,0 +1,30 @@
+{% extends "layouts/layout_utils.html" %}
+
+{% block og_title %}Page Not Found 404{% endblock og_title %}
+{% block og_description %}page not found{% endblock og_description %}
+{% block og_url %}forbidden{% endblock og_url %}
+
+{% block tc_title %}}Page Not Found 404{% endblock tc_title %}
+{% block tc_description %}page not found{% endblock tc_description%}
+{% block tc_url %}forbidden{% endblock tc_url %}
+
+{% block page_title %}Page Not Found 404{% endblock page_title %}
+{% block page_class %}utils special page-not-found{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/utils-services.css')}}">
+{% endblock styles %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='scripts/utils-services.js') }}" type="text/javascript" charset="utf-8"></script>
+{% endblock scripts %}
+
+
+{% block content %}
+<section id="core">
+  <header>
+    <h1>Page Not Found</h1>
+  </header>
+</section>
+{% endblock content %}
+

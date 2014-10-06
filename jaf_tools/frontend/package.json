@@ -1,0 +1,63 @@
+{
+  "name": "hayeslocms",
+  "author": "Regi E.",
+  "homepage": "",
+  "description": "Hayes Locms project",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://"
+  },
+  "bugs": {
+    "url": "https://"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "dependencies": {
+    "grunt-contrib-concat": "~0.5.0"
+  },
+  "devDependencies": {
+    "grunt-casperjs": "~1.4.0",
+    "imagemin": "^1.0.5",
+    "imagemin-gifsicle": "^1.0.0",
+    "bower": "latest",
+    "exit": "latest",
+    "grunt": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-autoshot": "^0.2.1",
+    "grunt-bower-task": "latest",
+    "grunt-concurrent": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-htmlmin": "latest",
+    "grunt-contrib-imagemin": "^0.8.1",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-requirejs": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-csso": "latest",
+    "grunt-devtools": "latest",
+    "grunt-html-validation": "latest",
+    "grunt-jsbeautifier": "latest",
+    "grunt-newer": "latest",
+    "grunt-node-inspector": "^0.1.5",
+    "grunt-svgmin": "latest",
+    "load-grunt-tasks": "latest",
+    "lodash": "latest",
+    "phantomjs": "latest",
+    "time-grunt": "latest",
+    "uglify-js": "^2.4.15",
+    "underscore": "latest",
+    "grunt-concat-css": "~0.3.1",
+    "grunt-browser-sync": "~1.5.2"
+  },
+  "scripts": {
+    "test": "",
+    "start": ""
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,24 @@
+{% extends "layouts/layout_utils.html" %}
+
+{% block og_title %}Forbidden 403{% endblock og_title %}
+{% block og_description %}restricted content{% endblock og_description %}
+{% block og_url %}forbidden{% endblock og_url %}
+
+{% block tc_title %}}Forbidden 403{% endblock tc_title %}
+{% block tc_description %}restricted content{% endblock tc_description%}
+{% block tc_url %}forbidden{% endblock tc_url %}
+
+{% block page_title %}Forbidden 403{% endblock page_title %}
+{% block page_class %}utils special forbidden{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/utils-services.css')}}">
+{% endblock styles %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='scripts/utils-services.js') }}" type="text/javascript" charset="utf-8"></script>
+{% endblock scripts %}
+
+
+{% block content %}
+{% endblock content %}

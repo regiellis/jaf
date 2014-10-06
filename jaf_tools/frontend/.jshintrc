@@ -1,0 +1,34 @@
+{
+  "browser"   : true,
+  "bitwise"   : true,
+  "devel"     : true,
+  "curly"     : false,
+  "eqeqeq"    : true,
+  "eqnull"    : true,
+  "forin"     : true,
+  "immed"     : true,
+  "jquery"    : true,
+  "latedef"   : true,
+  "laxcomma"  : true,
+  "newcap"    : true,
+  "noarg"     : true,
+  "quotmark"  : false,
+  "regexp"    : true,
+  "undef"     : true,
+  "unused"    : false,
+  "strict"    : false,
+  "sub"       : true,
+  "trailing"  : true,
+  "smarttabs" : true,
+  "expr"      : true,
+  "predef"    : [
+    "require",
+    "Modernizr"
+  ],
+  "globals"   : {
+    "requirejs" : true,
+    "define"    : true,
+    "jquery"    : true,
+    "casper"    : true
+  }
+}

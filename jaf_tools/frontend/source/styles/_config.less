@@ -1,0 +1,52 @@
+
+/** @charset "UTF-8" **/
+
+/** Helpers **/
+@images_dir: "/static/jaf/images/";
+@background_images: "@{images_dir}backgrounds/";
+@branding_images_dir: "@{images_dir}branding/";
+@gui_images_dir: "@{images_dir}gui/";
+@placeholders_images_dir: "@{images_dir}placeholders/";
+
+@max_width: 1440px;
+
+
+/*
+* Base Colors via style guide
+* All colors are in rgb/hex in comments
+*/
+
+@white: rgb(255, 255, 255); // #FFFFFF
+@black: rgb(0, 0, 0); //#000000
+
+
+/** Fonts **/
+
+/** Typography **/
+/**
+ * To use these vars in less you must write them as such:
+ * ~"@{section_title_size}rem|px|em"
+ * yes that is a tilde!
+ */
+
+@base_content_size: 16;
+@base_content_size_rem: 1rem;
+@super_uber_text_size: 60 / @base_content_size;
+@uber_text_size: 40 / @base_content_size;
+@heading_one_size: 35 / @base_content_size;
+@heading_two_size: 30 / @base_content_size;
+@heading_three_size: 26 / @base_content_size;
+@heading_four_size: 20 / @base_content_size;
+@heading_five_size: 15 / @base_content_size;
+@heading_six_size: 13 / @base_content_size;
+@section_title_size: 12 / @base_content_size;
+
+/** Font Size Aliases **/
+@light: 300;
+@normal: 500;
+@bold: 700;
+
+
+/** Section padding **/
+@content_padding: 8.4375%;
+

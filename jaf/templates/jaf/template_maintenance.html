@@ -1,0 +1,29 @@
+{% extends "layouts/layout_utils.html" %}
+
+{% block og_title %}Maintenance{% endblock og_title %}
+{% block og_description %}server error{% endblock og_description %}
+{% block og_url %}forbidden{% endblock og_url %}
+
+{% block tc_title %}}Maintenance{% endblock tc_title %}
+{% block tc_description %}server error{% endblock tc_description%}
+{% block tc_url %}forbidden{% endblock tc_url %}
+
+{% block page_title %}Maintenance{% endblock page_title %}
+{% block page_class %}utils special maintenance{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/utils-services.css')}}">
+{% endblock styles %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='scripts/utils-services.js') }}" type="text/javascript" charset="utf-8"></script>
+{% endblock scripts %}
+
+
+{% block content %}
+<section id="core">
+  <header>
+    <h1>Maintenance</h1>
+  </header>
+</section>
+{% endblock content %}
