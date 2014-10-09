@@ -11,8 +11,9 @@
     "tests"
   ],
   "exportsOverride": {
-    "angularjs": {
-      "scripts/libs": "angular.js"
+    "angular": {
+      "scripts/libs": "angular.js",
+      "styles/libs": "angular-csp.css"
     },
     "angular-ui-router": {
       "scripts/libs": "release/angular-ui-router.js"
@@ -24,6 +25,10 @@
     "angular-ui-utils": {
       "scripts/libs": "ui-utils.js"
     },
+    "sweetalert": {
+      "scripts/libs": "lib/sweet-alert.js",
+      "styles/libs": "lib/sweet-alert.css"
+    },
     "jquery": {
       "scripts/libs": "dist/jquery.js"
     },
@@ -34,17 +39,16 @@
       "scripts/libs": "src/pubsub.js"
     },
     "normalize-less": {
-      "styles/libs": "normalize.less"
+      "styles/mixins": "normalize.less"
     },
     "lesshat": {
-      "styles/libs": "build/lesshat.less"
+      "styles/mixins": "build/lesshat.less"
     },
     "animate-less": {
-      "styles/libs": "less/*.less"
+      "styles/mixins": "less/*.less"
     },
     "font-awesome": {
-      "scripts/libs": "**/*",
-      "styles/libs": "**/*.less",
+      "styles/mixins": "less/**/*.less",
       "fonts/": "fonts/**/*"
     },
     "*": {
@@ -64,7 +68,6 @@
     "angular-ui-select": "~0.7.0",
     "angular-ui-utils": "~0.1.1",
     "angular-ui-router": "~0.2.11",
-    "angularjs": "~1.2.26",
     "animate-less": "~2.0.1"
   },
   "devDependencies": {}

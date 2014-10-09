@@ -345,7 +345,7 @@ module.exports = function(grunt) {
             // },
             styles: {
               files: ['<%= less.dev.src %>', '<%= meta.sourcePath %>/styles/**/*.{less}'],
-              tasks: ['less:dev', 'copy:css', 'autoprefixer:dist', 'csso']
+              tasks: ['less:dev', 'concat_css', 'copy:css', 'autoprefixer:dist', 'csso']
             },
             scripts: {
               files: ['<%= meta.sourcePath %>/scripts/**/*.{coffee,js}'],
@@ -401,6 +401,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('rebuild', ['clean:build',
                               'concat',
+                              'concat_css',
                               'less:dev',
                               'csso',
                               'imagemin',
@@ -416,6 +417,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', ['clean:build',
                               'concat',
+                              'concat_css',
                               'less:dist',
                               'csso',
                               'imagemin',
