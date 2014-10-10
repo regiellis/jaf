@@ -1,4 +1,4 @@
-jaf:just add flask
+jaf:just add flask [![Build Status](https://api.shippable.com/projects/54372ee17a7fb11eaa64cffb/badge?branchName=develop)](https://app.shippable.com/projects/54372ee17a7fb11eaa64cffb/builds/latest)
 
 https://github.com/regiellis/jaf
 
