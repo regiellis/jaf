@@ -27,4 +27,11 @@ bower_modules
 *.orig
 *.sublime-workspace
 
+*.js
+*.css
 
+!jaf_tools/frontend/source/styles/libs/
+!jaf_tools/frontend/source/styles/mixins/
+!jaf_tools/frontend/source/styles/core_libs.css
+
+!jaf_tools/frontend/source/scripts/
