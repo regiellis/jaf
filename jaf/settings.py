@@ -28,12 +28,12 @@ class ProjectConfigs(object):
 
     # BASE MAIL CONFIGS
     MAIL_SERVER = os.environ.get('MAIL_SERVER') or 'localhost'
-    MAIL_PORT = os.environ.get('MAIL_PORT') or 25
+    MAIL_PORT = os.environ.get('MAIL_PORT') or 1025
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') or False
     MAIL_USE_SSL = os.environ.get('MAIL_USE_SSL') or False
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME') or None
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD') or None
-    DEFAULT_MAIL_SENDER = os.environ.get('DEFAULT_MAIL_SENDER') or None
+    DEFAULT_MAIL_SENDER = os.environ.get('DEFAULT_MAIL_SENDER') or 'jaf Application Server'
 
     GRUNT_MANAGED = True
 

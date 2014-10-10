@@ -80,6 +80,7 @@ def register_logging(app):
     """
 
     mail_server = app.config['MAIL_SERVER']
+    mail_port = app.config['MAIL_PORT']
     server_addr = app.config['DEFAULT_MAIL_SENDER']
     send_addr = app.config['ADMIN']
     error_msg = 'Application Failure'
@@ -92,7 +93,7 @@ def register_logging(app):
 
     # MAIL ADMINS ON ERROR
     if not app.config['DEBUG']:
-        mail_handler = SMTPHandler(mail_server, server_addr, send_addr, error_msg)
+        mail_handler = SMTPHandler((mail_server, mail_port), server_addr, send_addr, error_msg)
         mail_handler.setLevel(logging.ERROR)
         mail_handler.setFormatter(logging.Formatter('''
         Message Type:          %(levelname)s

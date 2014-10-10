@@ -23,30 +23,10 @@ CWD = os.path.abspath('jaf_tools/templates/')
 
 
 @manager.command
-def nginx_template():
+def create_production_exports():
 
     """
     Create template for deploying on nginx
-    """
-
-    pass
-
-
-@manager.command
-def heroku_template():
-
-    """
-    Create a template for deploying on heroku
-    """
-
-    pass
-
-
-@manager.command
-def create_uwsgi_file():
-
-    """
-    Create the projects uWSGI file for Deployment
     """
 
     pass
