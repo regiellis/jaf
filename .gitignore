@@ -18,6 +18,7 @@ node_modules
 bower_modules
 .webassets-cache
 *.pyc
+*.log
 
 # BOWER
 !.bowerrc

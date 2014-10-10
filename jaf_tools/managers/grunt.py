@@ -25,16 +25,53 @@ GRUNT_CWD = os.path.abspath('jaf_tools/frontend/')
 
 
 # SUBPROCESS HELPER
-def grunt_cmd(grunt_cmd=None):
+def grunt_cmd(grunt_cmd=None, msg=None):
 
     """ SUBPROCESS HELPER """
     if not grunt_cmd and not isinstance(grunt_cmd, str):
-        print "Need to provide command as a string"
+        print "{msg}".format(msg=colored("Need to provide command as a string", 'red'))
 
     os.chdir(GRUNT_CWD)
     response = subprocess.call([grunt_cmd], shell=True)
+    print "{msg}".format(msg=colored(msg, 'green'))
 
     return response
+
+
+def install_grunt():
+
+    """
+    Install grunt, grunt-cli and alias the command
+    locally
+    """
+
+    os.chdir(GRUNT_CWD)
+    response = subprocess.call(['npm install', 'npm link grunt-cli'], shell=True)
+    return response
+
+
+def install_bower():
+
+    """
+    Install grunt, grunt-cli and alias the command
+    locally
+    """
+
+    os.chdir(GRUNT_CWD)
+    response = subprocess.call(['bower install', 'grunt bower'], shell=True)
+    return response
+
+
+@manager.command
+def install_all_packages_and_assets():
+
+    """
+    Will install all needed packages and assets for
+    the applications
+    """
+    install_grunt()
+    install_bower()
+    return None
 
 
 @manager.command
@@ -43,6 +80,7 @@ def santy_check():
     """
     Runs a santy check via jshint on the Gruntfile
     """
+
     grunt_cmd("grunt jshint")
     return None
 
@@ -55,7 +93,7 @@ def screenshot():
     of the resolutions at options defined in the Gruntfile
     """
 
-    grunt_cmd("grunt screenshot")
+    grunt_cmd("grunt screenshot", "All screenshots have been taken")
     return None
 
 
@@ -67,7 +105,7 @@ def rebuild():
     the development flag
     """
 
-    grunt_cmd("grunt rebuild")
+    grunt_cmd("grunt rebuild", "Project has been rebuilt")
     return None
 
 
@@ -79,7 +117,7 @@ def build():
     the production flag
     """
 
-    grunt_cmd("grunt build")
+    grunt_cmd("grunt build", "Project has been built for deployment")
     return None
 
 
@@ -92,8 +130,7 @@ def clean():
 
     answer = prompt_bool(colored("Are you sure you want to delete you assets?", 'red'))
     if answer:
-        grunt_cmd("grunt clean")
-        print "{msg}".format(msg=colored("Your assets have been cleaned", 'green'))
+        grunt_cmd("grunt clean", msg="Your assets have been cleaned")
         return None
     print "{msg}".format(msg=colored("Nothing was removed", 'green'))
     return None

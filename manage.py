@@ -8,6 +8,8 @@ CREATE/UPDATE: 20141004
 """
 
 import os
+import subprocess
+from termcolor import colored
 from jaf import create_app
 from flask.ext.script import Manager, Shell, Server
 
@@ -24,6 +26,7 @@ manager.help_args = ('-?', '--help')
 
 def _make_shell_context():
     return dict(app=app)
+
 
 manager.add_command('runserver', Server(port=8000, host='0.0.0.0'))
 manager.add_command('develop', Server(use_debugger=True,

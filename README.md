@@ -2,6 +2,8 @@ jaf:just add flask
 
 https://github.com/regiellis/jaf
 
+
+
 jaf is a lightweight opinionated quick start template for the flask
 framework. This project for create as a template to allow me to hit
 the ground running on small personal and client projects. It is not
@@ -10,8 +12,8 @@ should be located in the `jaf/__init__.py`.
 
 
 Features:
-  * Grunt Intergration:
-  *
+  * Grunt Intergration: `./manage.py grunt-task`
+  * Deploy Intergration: `./manage.py deploy`
 
 
 Dependencies

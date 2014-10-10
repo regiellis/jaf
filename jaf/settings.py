@@ -19,6 +19,7 @@ class ProjectConfigs(object):
     """
 
     # BASE FLASK CONFIGS
+    ADMIN = ['email@somewhere.com', 'errors@somewhere.com']
     DEBUG = True
     MAINTENANCE = True
     TESTING = False
