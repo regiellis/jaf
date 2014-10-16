@@ -26,7 +26,7 @@ CWD = os.path.abspath('jaf_tools/templates/')
 def nginx_template():
 
     """
-    Create template for deploying on nginx
+    Creates template for deploying on nginx
     """
 
     pass
@@ -36,7 +36,7 @@ def nginx_template():
 def heroku_template():
 
     """
-    Create a template for deploying on heroku
+    Creates a template for deploying on heroku
     """
 
     pass
@@ -46,7 +46,7 @@ def heroku_template():
 def create_uwsgi_file():
 
     """
-    Create the projects uWSGI file for Deployment
+    Creates the projects uWSGI file for Deployment
     """
 
     pass

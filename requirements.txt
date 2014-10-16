@@ -1,5 +1,6 @@
 Fabric==1.10.0
 Flask==0.10.1
+Flask-Actions==0.6.6
 Flask-Assets==0.10
 Flask-Classy==0.6.10
 Flask-DebugToolbar==0.9.0

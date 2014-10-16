@@ -28,11 +28,23 @@ def _make_shell_context():
     return dict(app=app)
 
 
+@manager.command
+def start_production():
+
+    """
+    Starts a production based gunicorn server with a shortcut
+    """
+
+    subprocess.call(['gunicorn -b 127.0.0.1:8080 -w 4 server.py'], shell=True)
+    return None
+
+
 manager.add_command('runserver', Server(port=8000, host='0.0.0.0'))
 manager.add_command('develop', Server(use_debugger=True,
                     use_reloader=True, port=8000, host='0.0.0.0'))
-manager.add_command('shell', Shell(make_context=_make_shell_context))
-manager.add_command('grunt-task', grunt_manager)
+manager.add_command('shell', Shell(make_context=_make_shell_context, use_bpython=True))
+
+manager.add_command('grunt_task', grunt_manager)
 manager.add_command('deploy', deploy_manager)
 
 if __name__ == '__main__':

@@ -15,7 +15,7 @@ BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 class ProjectConfigs(object):
 
     """
-    Base configuration class for the entire project
+    Creates base configuration class for the entire project
     """
 
     # BASE FLASK CONFIGS
@@ -36,6 +36,7 @@ class ProjectConfigs(object):
     DEFAULT_MAIL_SENDER = os.environ.get('DEFAULT_MAIL_SENDER') or 'jaf Application Server'
 
     GRUNT_MANAGED = True
+    CACHE_TYPE = 'simple'
 
     # CREATE INSTANCE OF THE APP
     @staticmethod
@@ -46,12 +47,11 @@ class ProjectConfigs(object):
 class DevelopementConfigs(ProjectConfigs):
 
     """
-    Development Configs for the entire project
+    Creates development Configs for the entire project
     """
 
     ASSETS_DEBUG = True
     MAINTENANCE = False
-    CACHE_TYPE = 'simple'
     SECRET_KEY = 'generate_key_for_development'  # os.urandom()
 
     # DEBUG TOOLBAR
@@ -64,18 +64,20 @@ class DevelopementConfigs(ProjectConfigs):
 class ProductionConfigs(ProjectConfigs):
 
     """
-    Prodiction Configs for the entire project
+    Creates prodiction Configs for the entire project
     """
 
     DEBUG = False
     ASSETS_DEBUG = False
     MAINTENANCE = False
 
+    CACHE_TYPE = 'simple'
+
 
 class TestingConfigs(ProjectConfigs):
 
     """
-    Testing Configs for the entire project
+    Creates testing Configs for the entire project
     """
 
     TESTING = True

@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg   : grunt.file.readJSON('package.json'),
-        config: grunt.file.readJSON('asset_config.json'),
+        config: grunt.file.readJSON('config.json'),
         meta  : {
             projectName: '<%= pkg.name %>',
             basePath: '<%= config.baseDir %>',

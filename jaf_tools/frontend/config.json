@@ -5,7 +5,7 @@
     "url": "http://somedomain.com",
     "develop_url": "http://somedomain.com.local",
     "develop_port": 8000,
-    "baseDir": "hayes_locums",
+    "baseDir": "jaf",
     "buildPath": "../../jaf/static/",
     "sourcePath": "source/",
     "version": "1.0.0"

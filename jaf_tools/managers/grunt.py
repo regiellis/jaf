@@ -41,7 +41,7 @@ def grunt_cmd(grunt_cmd=None, msg=None):
 def install_grunt():
 
     """
-    Install grunt, grunt-cli and alias the command
+    Installs grunt, grunt-cli and alias the command
     locally
     """
 
@@ -53,7 +53,7 @@ def install_grunt():
 def install_bower():
 
     """
-    Install grunt, grunt-cli and alias the command
+    Installs grunt, grunt-cli and alias the command
     locally
     """
 
@@ -66,7 +66,7 @@ def install_bower():
 def install_all_packages_and_assets():
 
     """
-    Will install all needed packages and assets for
+    Installs all needed packages and assets for
     the applications
     """
     install_grunt()
@@ -89,7 +89,7 @@ def santy_check():
 def screenshot():
 
     """
-    Will start a application instance and take screenshots
+    Starts a application instance and take screenshots
     of the resolutions at options defined in the Gruntfile
     """
 
@@ -101,7 +101,7 @@ def screenshot():
 def rebuild():
 
     """
-    Will rebuild all project assets files under
+    Rebuilds all project assets files under
     the development flag
     """
 
@@ -113,7 +113,7 @@ def rebuild():
 def build():
 
     """
-    Will build all project assets files under
+    Builds all project assets files under
     the production flag
     """
 
@@ -125,7 +125,7 @@ def build():
 def clean():
 
     """
-    Will remove all generated project assets
+    Removes all generated project assets
     """
 
     answer = prompt_bool(colored("Are you sure you want to delete you assets?", 'red'))
