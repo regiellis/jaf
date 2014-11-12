@@ -8,7 +8,7 @@ CREATE/UPDATED: 20141004
 """
 
 import os
-import subprocess
+import subprocess32
 
 from termcolor import colored
 from flask.ext.script import Manager, prompt_bool
@@ -23,7 +23,7 @@ CWD = os.path.abspath('jaf_tools/templates/')
 
 
 @manager.command
-def create_production_exports():
+def create_production_exports(env, **kwargs):
 
     """
     Create template for deploying on nginx

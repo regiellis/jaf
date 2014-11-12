@@ -8,7 +8,7 @@ CREATE/UPDATED: 20141004
 """
 
 import os
-import subprocess
+import subprocess32
 
 from termcolor import colored
 from flask.ext.script import Manager, prompt_bool
@@ -32,7 +32,7 @@ def grunt_cmd(grunt_cmd=None, msg=None):
         print "{msg}".format(msg=colored("Need to provide command as a string", 'red'))
 
     os.chdir(GRUNT_CWD)
-    response = subprocess.call([grunt_cmd], shell=True)
+    response = subprocess32.call([grunt_cmd], shell=True)
     print "{msg}".format(msg=colored(msg, 'green'))
 
     return response
@@ -46,7 +46,7 @@ def install_grunt():
     """
 
     os.chdir(GRUNT_CWD)
-    response = subprocess.call(['npm install', 'npm link grunt-cli'], shell=True)
+    response = subprocess32.call(['npm install', 'npm link grunt-cli'], shell=True)
     return response
 
 
@@ -58,7 +58,7 @@ def install_bower():
     """
 
     os.chdir(GRUNT_CWD)
-    response = subprocess.call(['bower install', 'grunt bower'], shell=True)
+    response = subprocess32.call(['bower install', 'grunt bower'], shell=True)
     return response
 
 
@@ -82,6 +82,17 @@ def santy_check():
     """
 
     grunt_cmd("grunt jshint")
+    return None
+
+
+@manager.command
+def develop():
+
+    """
+    Starts a application instance with browsersync for
+    development
+    """
+    grunt_cmd("grunt develop", "Development Server Running")
     return None
 
 

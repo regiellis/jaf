@@ -38,7 +38,6 @@ from flask.ext.classy import FlaskView, route
 from flask.ext.cache import Cache
 from flask_wtf import Form
 from flask_wtf.csrf import CsrfProtect
-from flask_debugtoolbar import DebugToolbarExtension
 
 from settings import config
 
@@ -50,7 +49,6 @@ mail = Mail()
 assets = Environment()
 cache = Cache()
 csrf_protect = CsrfProtect()
-toolbar = DebugToolbarExtension()
 
 
 def create_app(config_name):
@@ -129,7 +127,9 @@ def register_extensions(app):
     mail.init_app(app)
     csrf_protect.init_app(app)
 
-    if app.debug:
+    if app.config['DEBUG']:
+        from flask_debugtoolbar import DebugToolbarExtension
+        toolbar = DebugToolbarExtension()
         toolbar.init_app(app)
 
     if not app.debug:

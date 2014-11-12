@@ -14,8 +14,7 @@ BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
 class ProjectConfigs(object):
 
-    """
-    Creates base configuration class for the entire project
+    """Creates base configuration class for the entire project
     """
 
     # BASE FLASK CONFIGS
@@ -46,8 +45,7 @@ class ProjectConfigs(object):
 
 class DevelopementConfigs(ProjectConfigs):
 
-    """
-    Creates development Configs for the entire project
+    """Creates development Configs for the entire project
     """
 
     ASSETS_DEBUG = True
@@ -55,7 +53,7 @@ class DevelopementConfigs(ProjectConfigs):
     SECRET_KEY = 'generate_key_for_development'  # os.urandom()
 
     # DEBUG TOOLBAR
-    DEBUG_TB_ENABLED = False
+    DEBUG_TB_ENABLED = True
     DEBUG_TO_INTERCEPT_REDITECTS = False
     DEBUG_TB_PROFILER_ENABLED = True
     DEBUG_TB_TEMPLATE_EDITOR_ENABLED = True
@@ -63,8 +61,7 @@ class DevelopementConfigs(ProjectConfigs):
 
 class ProductionConfigs(ProjectConfigs):
 
-    """
-    Creates prodiction Configs for the entire project
+    """Creates prodiction Configs for the entire project
     """
 
     DEBUG = False
@@ -76,8 +73,7 @@ class ProductionConfigs(ProjectConfigs):
 
 class TestingConfigs(ProjectConfigs):
 
-    """
-    Creates testing Configs for the entire project
+    """Creates testing Configs for the entire project
     """
 
     TESTING = True

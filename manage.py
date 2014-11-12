@@ -8,7 +8,7 @@ CREATE/UPDATE: 20141004
 """
 
 import os
-import subprocess
+import subprocess32
 from termcolor import colored
 from jaf import create_app
 from flask.ext.script import Manager, Shell, Server
@@ -35,7 +35,8 @@ def start_production():
     Starts a production based gunicorn server with a shortcut
     """
 
-    subprocess.call(['gunicorn -b 127.0.0.1:8080 -w 4 server.py'], shell=True)
+    subprocess32.call(['gunicorn -b 127.0.0.1:8080 -workers=4 server:app'], shell=True)
+    print "{msg}".format(colored(msg="Application server has started on port 8080..."))
     return None
 
 

@@ -1,12 +1,13 @@
 Just Add Flask [![Build Status](https://api.shippable.com/projects/54372ee17a7fb11eaa64cffb/badge?branchName=develop)](https://app.shippable.com/projects/54372ee17a7fb11eaa64cffb/builds/latest)
 --------------
 
+UNDER DEVELOPMENT - ALPHA
+
 Quick start flask single file template
 
-jaf is a lightweight opinionated quick start template for flask
-framework driven projects. This project is designed to allow me to hit
-the ground running on small personal and client projects. It is not
-meant to be used for a project larger then five pages.
+jaf is a opinionated lightweight quick start template for flask
+driven projects. This project is designed to allow me to hit
+the ground running on small personal and client projects.
 
 Features:
   * Grunt Intergration: `./manage.py grunt-task`

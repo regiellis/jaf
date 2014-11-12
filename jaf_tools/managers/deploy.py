@@ -8,7 +8,7 @@ CREATE/UPDATED: 20141004
 """
 
 import os
-import subprocess
+import subprocess32
 
 from termcolor import colored
 from flask.ext.script import Manager, prompt_bool
