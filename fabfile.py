@@ -26,7 +26,7 @@ devopts
 """
 
 env.user = 'vagrant'  # prompt("Username:")
-env.dpeloy_user = 'deploy'
+env.deploy_user = 'deploy'
 env.deploy_group = 'www-data'
 env.hosts = ['0.0.0.0']  # prompt("Hostname:") Enter your host name
 env.colorize_errors = True
